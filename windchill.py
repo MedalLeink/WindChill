@@ -21,3 +21,7 @@ def celsius_to_fahrenheit(temp_c):
 # Ask the user for input
 temperature = float(input("What is the temperature? "))
 unit = input("Fahrenheit or Celsius (F/C)? ").strip().upper()
+
+# Convert if necessary
+if unit == "C":
+    temperature = celsius_to_fahrenheit(temperature)
