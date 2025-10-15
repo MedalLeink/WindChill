@@ -25,3 +25,9 @@ unit = input("Fahrenheit or Celsius (F/C)? ").strip().upper()
 # Convert if necessary
 if unit == "C":
     temperature = celsius_to_fahrenheit(temperature)
+
+
+# Display windchill for speeds 5 to 60 mph
+for wind_speed in range(5, 65, 5):
+    wind_chill = calculate_windchill(temperature, wind_speed)
+    print(f"At temperature {temperature:.1f}F, and wind speed {wind_speed} mph, the windchill is: {wind_chill:.2f}F")
